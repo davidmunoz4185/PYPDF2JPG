@@ -25,11 +25,11 @@ These commands will install all necessary to run utility.
 
 These are the steps made to make it happen:
 
-1 Open PDF & Extract 1st Page (PyPDF2)
-2 Write 1st Page 2 PDF File (PyPDF2)
-3 First Page PDF 2 JPG (wand.image)
+* Open PDF & Extract 1st Page (PyPDF2)
+* Write 1st Page 2 PDF File (PyPDF2)
+* First Page PDF 2 JPG (wand.image)
 
-Before any exception, the software will throw message
+Before any exception a message will appear
 
 
 ### Test It ...
@@ -51,6 +51,28 @@ OK
 
 ```
 
-
+Just notice the existence of the following files:
 
 * descarga.pdf
+
+### Try It ...
+
+```
+python
+Python 2.7.12 (v2.7.12:d33e0cf91556, Jun 27 2016, 15:24:40) [MSC v.1500 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from utility import generate_thumb
+>>>
+>>>
+>>> generate_thumb("prueba.txt")
+
+FILE "prueba.txt" NOT FOUND ...
+False
+>>> generate_thumb("descarga.pdf")
+True
+>>> quit()
+
+```
+
+If return value is True you´ll obtain jpg file with the same name than parameter in "generate_thumb"
+
